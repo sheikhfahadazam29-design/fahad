@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css">
 </head>
 <body>
-    <h1>hello</h1>
+    <div id="navbar-container"></div>
+    <h1>Home page</h1>
+    <div id="footer-container"></div>
+   <script src="MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(()=>{
+            $.get('navbar.html' ,(data)=>{
+                console.log(data)
+                $('#navbar-container').html(data)
+            })
+
+
+            $.get('footer.html' ,(data)=>{
+                console.log(data)
+                $('#footer-container').html(data)
+            })
+        })
+    </script>
 </body>
 </html>
